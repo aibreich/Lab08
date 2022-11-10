@@ -103,9 +103,10 @@ VALUES ('$email', '$firstname', '$lastname', '$hashToStoreInDb', '$username')";
 
 
         }
+    }
 
     //logout method
-    public function logout() {}
+    public function logout() {
             //unset all the session variables
             $_SESSION = array();
 
