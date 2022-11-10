@@ -52,6 +52,13 @@ class View {
                         </html>
 
                         <?php
+                    }else if($location == 'verify') {
+                        ?> <footer><p>Please click here to login. <a href="?action=login">Login</a> </p></footer>
+                        </div>
+                        </body>
+                        </html>
+
+                        <?php
                     }
                 }
 

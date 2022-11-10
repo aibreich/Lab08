@@ -10,17 +10,22 @@ class Verify extends  View
 {
     public function display(){
         //Display the header
-        parent:: header();
+        parent:: header("You're Verified");
         ?>
 
         <!-- Code to display the confirmation of a successful login or an unsuccessful login-->
         <?php
             //Call the login verify method in the user model
-            User_Model::verify_user();
+//            User_Model::verify_user();
         ?>
+            <div class="verify">
+                <p>Account Created Successfully!</p>
+                <p>Please login!</p>
+            </div>
+
 
         <?php
         //Display the footer
-        parent::footer();
+        parent::footer('verify');
     }
 }

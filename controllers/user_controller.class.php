@@ -39,12 +39,14 @@ class UserController {
 
     //verify
     public function verify(){
-
+        $view = new Verify();
+        $view->display();
     }
 
     //logout
     public function logout(){
-
+        $view = new Logout();
+        $view->display();
     }
 
     //reset
