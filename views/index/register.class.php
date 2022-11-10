@@ -15,15 +15,8 @@ class Register extends  View
 
         <!-- Code to display the confirmation of a successful registration attempt or the failure of an attempt -->
         <?php
-            //Check if sql statement returned true or false
-            if(isset($_POST['adduser'])){
-                if($_POST['adduser'] == 0){
-                    $message = "Add User Failed";
-                    UserError::display($message);
-                } else if ($_POST['adduser'] == 1){
-                    echo "<h1>Your account has been successfully created</h1>";
-                }
-            }
+            //Call the verify registration method in the user model
+            User_Model::verify_register();
         ?>
 
         <?php
