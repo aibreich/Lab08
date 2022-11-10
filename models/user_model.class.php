@@ -36,13 +36,16 @@ VALUES ('$email', '$firstname', '$lastname', '$hashToStoreInDb', '$username')";
 
         //make database query
         $query =$this->db->query($addUser);
-
-        if($query != true) {
-            $_POST['adduser']=0;
-        }elseif ($query != false) {
-            $_POST['adduser']=1;
+        
+    }
+    
+    //Verify registration is complete
+    public function verify_register(){
+        if($query===1){
+            echo "This account has been registered!";
+        } else if ($query ===0){
+            echo "The account could not be created.";
         }
-
     }
 
 // $isPasswordCorrect = password_verify($_POST['password'], $existingHashFromDb);
