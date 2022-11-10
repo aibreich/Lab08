@@ -16,7 +16,7 @@ class Verify extends  View
         <!-- Code to display the confirmation of a successful login or an unsuccessful login-->
         <?php
             //Call the login verify method in the user model
-            User_Model::verify_user();
+            User_Model::class;
         ?>
             <div class="verify">
                 <p>Account Created Successfully!</p>

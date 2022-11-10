@@ -16,8 +16,15 @@ class Register extends  View
         <!-- Code to display the confirmation of a successful registration attempt or the failure of an attempt -->
         <?php
             //Call the verify registration method in the user model
-            User_Model::verify_register();
+            User_Model::class;
+
+
         ?>
+
+        <div class="verify">
+            <p>Account Registered Successfully!</p>
+            <p>Please login!</p>
+        </div>
 
         <?php
         //Display the footer
