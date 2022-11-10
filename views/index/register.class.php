@@ -8,20 +8,21 @@
  */
 class Register extends  View
 {
-    public function display(){
+    public function display($status){
         //Display the header
         parent:: header('Account Registered');
         ?>
 
-        <!-- Code to display the confirmation of a successful registration attempt or the failure of an attempt -->
-        <?php
-            //Call the verify registration method in the user model
-            User_Model::class;
-
-
-        ?>
+<!--        <!-- Code to display the confirmation of a successful registration attempt or the failure of an attempt -->-->
+<!--        --><?php
+//            //Call the verify registration method in the user model
+//            User_Model::class;
+//
+//
+//        ?>
 
         <div class="verify">
+
             <p>Account Registered Successfully!</p>
             <p>Please login!</p>
         </div>

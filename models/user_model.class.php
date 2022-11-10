@@ -15,27 +15,27 @@ class UserModel {
 
 
     public function __construct() {
-        $this->db = Database::getDatabase();
+        $this->db = Database::getInstance();
         $this->dbConnection = $this->db->getConnection();
     }
 
     //add user method
-    public function add_user()
+    public function add_user($username, $password, $firstname, $lastname, $email)
     {
         //Get POST information
 //        $password = $_POST['password'];
-        $username = $_POST['username'];
-        $firstname = $_POST['fname'];
-        $lastname = $_POST['lname'];
-        $email = $_POST['email'];
+//        $username = $_POST['username'];
+//        $firstname = $_POST['fname'];
+//        $lastname = $_POST['lname'];
+//        $email = $_POST['email'];
         //hash password
-        $hashToStoreInDb = password_hash($_POST['password'], PASSWORD_DEFAULT);
+        $hashToStoreInDb = password_hash($password, PASSWORD_DEFAULT);
         $addUser = "INSERT INTO users (email, firstname, lastname, password, username)
 VALUES ('$email', '$firstname', '$lastname', '$hashToStoreInDb', '$username')";
 
 
         //make database query
-        $query = $this->dbConnection->query($addUser);
+        $this->dbConnection->query($addUser);
         
     }
     
@@ -51,57 +51,65 @@ VALUES ('$email', '$firstname', '$lastname', '$hashToStoreInDb', '$username')";
 // $isPasswordCorrect = password_verify($_POST['password'], $existingHashFromDb);
 
     //verify user method
-    public function verify_user() {
-        $username = validate($_POST['username']);
-
-        $password = validate($_POST['password']);
+    public function verify_user($username, $password) {
+//        $username = validate($username);
+//
+//        $password = validate($password);
 
         //IF error user didn't put in username
-        if (empty($user)) {
-            header("User Name is required");
-            exit();
+        if (empty($username)) {
+//            header("User Name is required");
+//            exit();
+            return 'user';
         }
 
         //IF error user didn't put in password
         else if(empty($password)){
-            header("Password is required");
-            exit();
+//            header("Password is required");
+//            exit();
+            return 'pass';
         }
 
         //ELSE getting the database
         else {
             $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
 
-            $result = mysqli_query($sql);
+            $result = $this->dbConnection->query($sql);
 
-            if (mysqli_num_rows($result) === 1) {
+            if (mysqli_num_rows($result) === 0) {
 
                 $row = mysqli_fetch_assoc($result);
-                //IF Password and Username match-- logging in user
-                if ($row['user_name'] === $username && $row['password'] === $password) {
+                //IF Password and Username match -- logging in user
+                $hashToStoreInDb = password_hash($password, PASSWORD_DEFAULT);
+
+                if ($row['username'] === $username && $row['password'] === $hashToStoreInDb) {
 
                     echo "Logged in!";
 
-                    $_SESSION['user_name'] = $row['user_name'];
+                    $_SESSION['username'] = $row['username'];
 
                     $_SESSION['name'] = $row['name'];
 
                     $_SESSION['id'] = $row['id'];
 
-                    header("Logged in");
+//                    header("Logged in");
+//
+//                    exit();
 
-                    exit();
-
+                    return 'true';
                 } //ELSE error username and password don't match in database
                 else {
 
-                    header("Incorrect Username or password");
-
-                    exit();
+//                    header("Incorrect Username or password");
+//
+//                    exit();
+                    return 'something';
 
                 }
 
 
+            } else {
+                return 'this if';
             }
 
 

@@ -7,6 +7,10 @@
  * Description: The code necessary to change what action is being taken
  */
 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 //include code in vendor/autoload.php file
 require_once ("vendor/autoload.php");
 

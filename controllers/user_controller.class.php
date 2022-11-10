@@ -13,7 +13,9 @@ class UserController {
     //default constructor
     public function __construct() {
         //create an instance of the UserModel class
-        $this->login_model = UserModel::class;
+//        $this->login_model = UserModel::class;
+        $this->login_model = new UserModel;
+
     }
 
     //index
@@ -27,22 +29,37 @@ class UserController {
     public function register(){
         //display
 //        UserModel::addUser();
-        $this->login_model->addUser();
+        $user_model = new UserModel();
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $firstname = $_POST['fname'];
+        $lastname = $_POST['lname'];
+        $email = $_POST['email'];
+        $status = $user_model->add_user($username, $password, $firstname, $lastname, $email);
         $view = new Register();
-        $view->display();
+        $view->display($status);
     }
 
     //login
     public function login(){
         //display
+
+
         $view = new Login();
         $view->display();
     }
 
     //verify
     public function verify(){
+        $user_model = new UserModel();
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $veri = $user_model->verify_user($username, $password);
+
+
         $view = new Verify();
-        $view->display();
+        $view->display($veri);
     }
 
     //logout

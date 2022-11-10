@@ -23,7 +23,7 @@ class Database {
     //constructor
     public function __construct() {
 
-        $this->objDBConnection = @new mysqli(
+        $this->objDBConnection = new mysqli(
                         $this->param['host'],
                         $this->param['login'],
                         $this->param['password'],
