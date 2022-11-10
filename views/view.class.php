@@ -21,6 +21,7 @@ class View {
             <body>
                 <h1><span style="color: forestgreen; font-family: serif; font-size: 36pt">PeaPOD</span> User Management System</h1>
                 <div id="wrapper">
+                    <p>CREATE AN ACCOUNT</p>
                     <img src="www/img/peapod_logo.png" style="float: right; width: 130px">
                     <?php
                 }
@@ -28,7 +29,7 @@ class View {
                 //create the page footer
                 public static function footer() {
                     ?>
-                    <footer>Already have an account? <a href="#">Login</a> </footer>
+                    <footer><p>Already have an account? <a href="#">Login</a> </p></footer>
                 </div>
             </body>
         </html>

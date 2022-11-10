@@ -68,3 +68,18 @@ a {
     text-decoration: none;
     color: #316AC5;
 }
+
+footer {
+    margin-top: 15px;
+    width: 100%;
+    height: 40px;
+    border-top: black 1px solid;
+    display: flex;
+    /*justify-content: center;*/
+    /*align-content: center;*/
+
+    p {
+        position: center;
+    }
+}
+
