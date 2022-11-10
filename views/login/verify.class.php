@@ -15,13 +15,13 @@ class Verify extends  View
 
         <!-- Code to display the confirmation of a successful login or an unsuccessful login-->
         //Check if sql statement returned true or false
-        if(isset($_POST['adduser'])){
-        if($_POST['adduser'] == 0){
-        $message = "Add User Failed";
-        UserError::display($message);
-        } else if ($_POST['adduser'] == 1){
-        echo "<h1>Your account has been successfully created</h1>";
-        }
+        if(isset($_POST['login_verify'])){
+            if($_POST['login_verify'] === 0){
+                $message = "Add User Failed";
+                UserError::display($message);
+            } else if ($_POST['login_user'] === 1){
+                echo "<h1>You have logged in successfully!</h1>";
+            }
         }
 
         <?php
