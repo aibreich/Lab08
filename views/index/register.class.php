@@ -10,7 +10,7 @@ class Register extends  View
 {
     public function display(){
         //Display the header
-        parent:: header();
+        parent:: header('Account Registered');
         ?>
 
         <!-- Code to display the confirmation of a successful registration attempt or the failure of an attempt -->
@@ -28,6 +28,6 @@ class Register extends  View
 
         <?php
         //Display the footer
-        parent::footer();
+        parent::footer('home');
     }
 }

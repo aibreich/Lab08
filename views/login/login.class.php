@@ -15,7 +15,7 @@ class Login extends  View
 
         <!-- Code to display the form for logging in -->
         <!-- username, password, email, firstname, lastname-->
-        <form action="/index.php?action=login" method="post">
+        <form action="index.php?action=verify" method="post">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label><br>

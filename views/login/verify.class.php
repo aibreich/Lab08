@@ -19,8 +19,8 @@ class Verify extends  View
             User_Model::class;
         ?>
             <div class="verify">
-                <p>Account Created Successfully!</p>
-                <p>Please login!</p>
+                <p>Account Log in Successful!</p>
+<!--                <p>Please login!</p>-->
             </div>
 
 

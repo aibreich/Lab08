@@ -15,7 +15,7 @@ class Index extends  View
 
         <!-- Code to display the registration form for users to sign up in -->
         <!-- username, password, email, firstname, lastname-->
-        <form action="/index.php?action=register" method="post">
+        <form action="index.php?action=register" method="post">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label><br>
@@ -26,7 +26,8 @@ class Index extends  View
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname" required><br>
-            <a href="?action=verify"><div class="sub">Submit</div></a>
+<!--            <a href="?action=verify"><div class="sub">Submit</div></a>-->
+            <input type="submit" value="Submit" href="?action=verify">
 
         </form>
 
