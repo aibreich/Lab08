@@ -29,9 +29,11 @@ class Index extends  View
 <!--            <a href="?action=verify"><div class="sub">Submit</div></a>-->
             <input type="submit" value="Submit" href="?action=verify">
 
+
         </form>
 
         <?php
+
         //Display the footer
         parent::footer('home');
     }

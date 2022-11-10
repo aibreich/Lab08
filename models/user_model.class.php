@@ -35,7 +35,7 @@ VALUES ('$email', '$firstname', '$lastname', '$hashToStoreInDb', '$username')";
 
 
         //make database query
-        $query =$this->db->query($addUser);
+        $query = $this->dbConnection->query($addUser);
         
     }
     

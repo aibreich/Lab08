@@ -26,6 +26,8 @@ class UserController {
     //register
     public function register(){
         //display
+//        UserModel::addUser();
+        $this->login_model->addUser();
         $view = new Register();
         $view->display();
     }
