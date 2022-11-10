@@ -26,8 +26,8 @@ class Index extends  View
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname" required><br>
-            <input type="submit" value="Submit">
-            <input type="reset" value="Reset">
+            <a href="?action=verify"><div class="sub">Submit</div></a>
+
         </form>
 
         <?php
