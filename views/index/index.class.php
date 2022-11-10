@@ -10,7 +10,7 @@ class Index extends  View
 {
     public function display(){
         //Display the header
-        parent:: header();
+        parent:: header("Create An Account");
         ?>
 
         <!-- Code to display the registration form for users to sign up in -->

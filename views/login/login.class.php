@@ -10,7 +10,7 @@ class Login extends  View
 {
     public function display(){
         //Display the header
-        parent:: header();
+        parent:: header("Login into Account!");
         ?>
 
         <!-- Code to display the form for logging in -->
@@ -18,7 +18,7 @@ class Login extends  View
         <form action="/index.php?action=login" method="post">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br>
-            <label for="password">Password:</label>
+            <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" min="5" required><br>
 
             <input type="submit" value="Submit">

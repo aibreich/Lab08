@@ -32,7 +32,9 @@ class UserController {
 
     //login
     public function login(){
-
+        //display
+        $view = new Login();
+        $view->display();
     }
 
     //verify
