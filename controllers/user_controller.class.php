@@ -13,7 +13,7 @@ class UserController {
     //default constructor
     public function __construct() {
         //create an instance of the UserModel class
-        $this->login_model = UserModel::getUserModel();
+        $this->login_model = UserModel::class;
     }
 
     //index
