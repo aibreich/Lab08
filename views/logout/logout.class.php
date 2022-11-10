@@ -10,13 +10,17 @@ class Logout extends  View
 {
     public function display(){
         //Display the header
-        parent:: header();
+        parent:: header("Logged Out");
         ?>
 
         <!-- Code to display the confirmation of a logout -->
+        <div class="verify">
+            <p>Logged Out Successful!</p>
+            <p>Have a good one!</p>
+        </div>
 
         <?php
         //Display the footer
-        parent::footer();
+        parent::footer('logout');
     }
 }
