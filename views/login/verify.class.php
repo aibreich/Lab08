@@ -14,8 +14,10 @@ class Verify extends  View
         ?>
 
         <!-- Code to display the confirmation of a successful login or an unsuccessful login-->
-        //
-        User_Model::verify_user();
+        <?php
+            //Call the login verify method in the user model
+            User_Model::verify_user();
+        ?>
 
         <?php
         //Display the footer
