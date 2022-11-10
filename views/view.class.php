@@ -51,13 +51,5 @@ class View {
                         </body>
                         </html>
                     }
-
-
-                    <footer><p>Already have an account? <a href="?action=login">Login</a> </p></footer>
-                </div>
-            </body>
-        </html>
-        <?php
-    }
-
+                }
 }
