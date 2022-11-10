@@ -32,6 +32,6 @@ class Index extends  View
 
         <?php
         //Display the footer
-        parent::footer();
+        parent::footer('home');
     }
 }

@@ -27,6 +27,6 @@ class Login extends  View
 
         <?php
         //Display the footer
-        parent::footer();
+        parent::footer('login');
     }
 }
