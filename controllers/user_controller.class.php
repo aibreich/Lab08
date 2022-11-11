@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Author: Aiden Eichenour
+ * Author: Marielle Harrell
  * date: 11/7/22
  * File: user_controller.class.php
  * Description: this is the user controller class which defines the 8 actions
@@ -13,59 +13,54 @@ class UserController {
     //default constructor
     public function __construct() {
         //create an instance of the UserModel class
-//        $this->login_model = UserModel::class;
         $this->login_model = new UserModel;
 
     }
 
-    //index
+    //index function
     public function index(){
-        //display
-        $view = new Index();
-        $view->display();
+
+        $view = new Index(); //instance
+        $view->display();//display
     }
 
-    //register
+    //register function
     public function register(){
-        //display
-//        UserModel::addUser();
+        //grab the details from the form
         $user_model = new UserModel();
         $username = $_POST['username'];
         $password = $_POST['password'];
         $firstname = $_POST['fname'];
         $lastname = $_POST['lname'];
         $email = $_POST['email'];
+        //create status
         $status = $user_model->add_user($username, $password, $firstname, $lastname, $email);
-        $view = new Register();
-        $view->display($status);
+        $view = new Register();//instance
+        $view->display($status); //display
     }
 
-    //login
+    //login function
     public function login(){
-        //display
-
-
-        $view = new Login();
-        $view->display();
+        $view = new Login();//instance
+        $view->display();//display
     }
 
     //verify
     public function verify(){
+        //grab the data from the form
         $user_model = new UserModel();
         $username = $_POST['username'];
         $password = $_POST['password'];
-
+        //create veri to verify
         $veri = $user_model->verify_user($username, $password);
-
-
-        $view = new Verify();
-        $view->display($veri);
+        $view = new Verify();//instance
+        $view->display($veri);// display
     }
 
-    //logout
+    //logout function
     public function logout(){
-        $view = new Logout();
-        $view->display();
+        $view = new Logout();//instance
+        $view->display();//display
     }
 
     //reset

@@ -1,6 +1,6 @@
 <?php
 /*
- * Author: Louie Zhu
+ * Author: Louie Zhu Additional footer and header code: Aiden Eichenour
  * Date: 10/20/2021
  * Name: view.class.php
  * Description: define the parent class for all view classes. The two methods create page header and footer.
@@ -33,18 +33,21 @@ class View {
                 //create the page footer
                 public static function footer($location) {
 
+                    //if home display the home footer
                     if($location == 'home') {
                         ?> <footer><p>Already have an account? <a href="?action=login">Login</a> </p></footer>
                         </div>
                         </body>
                         </html>
                         <?php
+                        //if login show login footer
                     }else if($location == 'login'){
                         ?> <footer><p>Don't have an account? <a href="?action=index">Register</a> </p></footer>
                         </div>
                         </body>
                         </html>
                         <?php
+                        //if logout show logout footer
                     }else if($location == 'logout') {
                         ?> <footer><p>Already have an account? <a href="?action=login">Login</a> </p></footer>
                         </div>
@@ -52,6 +55,7 @@ class View {
                         </html>
 
                         <?php
+                        //if verify show verify footer
                     }else if($location == 'verify') {
                         ?> <footer><p>Please click here to login. <a href="?action=login">Login</a> </p></footer>
                         </div>
@@ -59,13 +63,7 @@ class View {
                         </html>
 
                         <?php
-                    }else if($location == 'logout') {
-                        ?> <footer><p>Please click here to login. <a href="?action=login">Login</a> </p></footer>
-                        </div>
-                        </body>
-                        </html>
 
-                        <?php
                     }
                 }
 

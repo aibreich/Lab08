@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Author: Aiden Eichenour
+ * Author: Seth Howell
  * date: 11/7/22
  * File: logout.class.php
  * Description: Displays a confirmation page that the user has logged out

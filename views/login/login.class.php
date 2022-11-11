@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Author: Aiden Eichenour
+ * Author: Marielle Harrell
  * date: 11/7/22
  * File: login.class.php
  * Description: The methods to display a form for logging in
@@ -20,7 +20,6 @@ class Login extends  View
             <input type="text" id="username" name="username" required><br>
             <label for="password">Password:</label><br>
             <input type="password" id="password" name="password" min="5" required><br>
-
             <input type="submit" value="Submit">
         </form>
 

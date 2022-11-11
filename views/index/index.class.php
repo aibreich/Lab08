@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Author: Aiden Eichenour
+ * Author: Eli Sample
  * date: 11/7/22
  * File: index.class.php
  * Description: The methods for showing a form to create a user
@@ -26,7 +26,6 @@ class Index extends  View
             <input type="text" id="fname" name="fname" required><br>
             <label for="lname">Last name:</label><br>
             <input type="text" id="lname" name="lname" required><br>
-<!--            <a href="?action=verify"><div class="sub">Submit</div></a>-->
             <input type="submit" value="Submit" href="?action=verify">
 
 
